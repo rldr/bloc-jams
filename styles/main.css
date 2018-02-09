@@ -56,6 +56,7 @@ body {
 }
 
 .links-container .navbar-link:hover {
+<<<<<<< HEAD
   color: rgb(233,50,117);
 }
 
@@ -63,6 +64,9 @@ body {
   color: rgb(233,50,117);
   background-color: white;
 }
+=======
+   color: rgb(233,50,117);}
+>>>>>>> Rebase updates
 
 .container {
     margin: 0 auto;
