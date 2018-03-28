@@ -30,6 +30,32 @@
      ]
  };
 
+ var albumOcean = {
+     title: 'Blonde',
+     artist: 'Frank Ocean',
+     label: 'Boys Don\'t Cry',
+     year: '2016',
+     albumArtUrl: 'assets/images/album_covers/blonde.jpg',
+     songs: [
+         { title: 'Nikes', duration: '5:14' },
+         { title: 'Ivy', duration: '4:09' },
+         { title: 'Pink + White', duration: '3:04'},
+         { title: 'Be Yourself', duration: '1:26' },
+         { title: 'Solo', duration: '4:17'},
+         { title: 'Skyline To', duration: '3:04'},
+         { title: 'Self Control', duration: '4:09'},
+         { title: 'Good Guy', duration: '1:06'},
+         { title: 'Nights', duration: '5:07'},
+         { title: 'Pretty Sweet', duration: '2:37'},
+         { title: 'Facebook Story', duration: '1:08'},
+         { title: 'Close To You', duration: '1:25'},
+         { title: 'White Ferrari', duration: '4:08'},
+         { title: 'Seigfried', duration: '5:34'},
+         { title: 'Godspeed', duration: '2:57'},
+         { title: 'Futura Free', duration: '4:53'},
+     ]
+ };
+
  var createSongRow = function(songNumber, songName, songLength) {
       var template =
          '<tr class="album-view-song-item">'
@@ -65,6 +91,20 @@
      }
  };
 
+
  window.onload = function() {
-     setCurrentAlbum(albumMarconi);
+     setCurrentAlbum(albumPicasso);
+
+     var albs = [albumPicasso, albumMarconi, albumOcean];
+     var i = 1;
+
+     albumImage.addEventListener("click", function(event){
+
+       setCurrentAlbum(albs[i]);
+       i++;
+       if (i == albs.length) {
+          i = 0;
+       }
+
+    });
  };
