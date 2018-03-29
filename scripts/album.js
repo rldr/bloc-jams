@@ -93,6 +93,7 @@
 
 
  window.onload = function() {
+     var albumImage = document.getElementsByClassName('album-cover-art')[0];
      setCurrentAlbum(albumPicasso);
 
      var albs = [albumPicasso, albumMarconi, albumOcean];
