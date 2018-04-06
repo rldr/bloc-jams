@@ -68,7 +68,14 @@
 //change the song number to the pause button
 
 var findParentByClassName = function(element, targetClass){
-    if(element){
+    if(element.parentElement.className == null){
+      console.log("No parent found");
+    }
+//code fails at this else if
+    else if(element.parentElement.className !== targetClass){
+      console.log("No parent found with that class name");
+    }
+    else{
       var currentParent = element.parentElement;
       while (currentParent.className !== targetClass && currentParent.className !== null) {
         currentParent = currentParent.parentElement;
