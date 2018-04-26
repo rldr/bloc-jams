@@ -37,7 +37,7 @@
        + '  <td class="song-item-title">' + songName + '</td>'
        + '  <td class="song-item-duration">' + songLength + '</td>'
        + '</tr>'
-       ;
+     ;
 
       var $row = $(template);
 
@@ -66,13 +66,16 @@
 
         if (songNumber !== currentlyPlayingSong) {
             songNumberCell.html(playButtonTemplate);
+          }
       };
+
       var offHover = function(event) {
         var songNumberCell = $(this).find('.song-item-number');
         var songNumber = songNumberCell.attr('data-song-number');
 
         if (songNumber !== currentlyPlayingSong) {
             songNumberCell.html(songNumber);
+          }
       };
 
       $row.find('.song-item-number').click(clickHandler);
