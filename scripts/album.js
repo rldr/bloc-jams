@@ -219,7 +219,7 @@ var $playbutton = $('.main-controls .play-pause');
 
  $(document).ready(function() {
 
-   setCurrentAlbum(albumMarconi);
+   setCurrentAlbum(albumPicasso);
    $previousButton.click(previousSong);
    $nextButton.click(nextSong);
    $playbutton.click(togglePlayFromPlayerBar);
